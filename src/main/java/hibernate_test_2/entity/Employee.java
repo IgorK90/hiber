@@ -1,6 +1,4 @@
-package com.example.hiber.entity;
-
-import hibernate_test_2.entity.Detail;
+package hibernate_test_2.entity;
 
 import javax.persistence.*;
 
@@ -19,6 +17,10 @@ public class Employee {
     private String department;
     @Column
     private int salary;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name="details_id")
+    private Detail empDetail;
 
     public Employee() {
     }
@@ -81,5 +83,11 @@ public class Employee {
         this.salary = salary;
     }
 
+    public Detail getEmpDetail() {
+        return empDetail;
+    }
 
+    public void setEmpDetail(Detail empDetail) {
+        this.empDetail = empDetail;
+    }
 }
