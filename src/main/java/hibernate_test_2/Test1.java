@@ -14,7 +14,7 @@ public class Test1 {
                 addAnnotatedClass(hibernate_test_2.entity.Employee.class).
                 addAnnotatedClass(hibernate_test_2.entity.Detail.class).
                 buildSessionFactory();
-        Session session = factory.getCurrentSession();
+        Session session = null;
         try {
 //            Session session = factory.getCurrentSession();
 //            Employee employee = new Employee("Zaur", "Tregulov", "IT", 500);
@@ -50,7 +50,7 @@ public class Test1 {
 //            System.out.println(emp.getEmpDetail());
 //
 //
-
+            session = factory.getCurrentSession();
             session.beginTransaction();
             Employee emp = session.get(Employee.class, 2);
             session.delete(emp);
