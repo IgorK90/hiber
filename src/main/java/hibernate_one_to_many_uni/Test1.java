@@ -18,20 +18,20 @@ public class Test1 {
         Session session = null;
         try {
 
-//            session = factory.getCurrentSession();
-//
-//            Department dep = new Department("HR",500,1500);
-//            Employee emp1 = new Employee("Oleg", "Ivanov",800);
-//            Employee emp2 = new Employee("Andrey", "Sidorov",1000);
-//
-//            dep.addEmployeeToDepartment(emp1);
-//            dep.addEmployeeToDepartment(emp2);
-//
-//            session.beginTransaction();
-//            session.save(dep);
-//
-//            session.getTransaction().commit();
-//            System.out.println("DONE");
+            session = factory.getCurrentSession();
+
+            Department dep = new Department("HR",500,1500);
+            Employee emp1 = new Employee("Oleg", "Ivanov",800);
+            Employee emp2 = new Employee("Andrey", "Sidorov",1000);
+
+            dep.addEmployeeToDepartment(emp1);
+            dep.addEmployeeToDepartment(emp2);
+
+            session.beginTransaction();
+            session.save(dep);
+
+            session.getTransaction().commit();
+            System.out.println("DONE");
 //***************************************************************************
 //            session = factory.getCurrentSession();
 //
@@ -57,13 +57,13 @@ public class Test1 {
 //            session.getTransaction().commit();
 //            System.out.println("DONE");
 //***************************************************************************
-            session = factory.getCurrentSession();
-            session.beginTransaction();
-            Department dep = session.get(Department.class, 3);
-
-            session.delete(dep);
-            session.getTransaction().commit();
-            System.out.println("DONE");
+//            session = factory.getCurrentSession();
+//            session.beginTransaction();
+//            Department dep = session.get(Department.class, 3);
+//
+//            session.delete(dep);
+//            session.getTransaction().commit();
+//            System.out.println("DONE");
 //***************************************************************************
 //            session = factory.getCurrentSession();
 //
